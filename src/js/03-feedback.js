@@ -19,6 +19,9 @@ function onFormIput(ev) {
 
 function onFormSubmit(ev) {
     ev.preventDefault()
+     form.forEach((name, value) => {
+        console.log(name, value);
+    })  
     ev.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY)
    
