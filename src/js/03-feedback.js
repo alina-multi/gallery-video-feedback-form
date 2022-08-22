@@ -19,9 +19,11 @@ function onFormIput(ev) {
 
 function onFormSubmit(ev) {
     ev.preventDefault()
-     form.forEach((name, value) => {
-        console.log(name, value);
-    })  
+    const formData = new FormData(form);
+    const email = formData.get('email');
+    const message = formData.get('message')
+    console.log(email,message)
+  
     ev.currentTarget.reset();
     localStorage.removeItem(STORAGE_KEY)
    
